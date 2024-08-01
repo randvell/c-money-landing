@@ -1,0 +1,45 @@
+.advantages {
+  margin-bottom: 90px;
+
+  &__header {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    padding-left: 41px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 80%;
+      height: 4px;
+      left: 41px;
+      top: 130px;
+
+      background: linear-gradient(
+        87.4deg,
+        #2e00b1 -11.74%,
+        #8100bd 48.81%,
+        #a400be 113.27%
+      );
+    }
+  }
+
+  &__item-icon {
+    position: absolute;
+    left: 0;
+  }
+
+  &__item-header {
+    margin-bottom: 10px;
+  }
+}

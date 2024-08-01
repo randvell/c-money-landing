@@ -1,0 +1,43 @@
+$font-family: 'Nunito', sans-serif;
+$second-family: 'Comfortaa', sans-serif;
+
+$dark: #210b36;
+$semiDark: #392350;
+$white: #fff;
+$purple: #6e479e;
+$lightPurple: #b865d6;
+$light: #c6b6d7;
+
+:root {
+  --1: #392350;
+  --2: #210b36;
+  --3: #c6b6d7;
+  --4: #fff;
+  --7: #b865d6;
+  --8: #6e479e;
+}
+
+@mixin font($name, $weight) {
+  font-family: $name;
+  font-weight: $weight;
+  font-display: swap;
+  src: url('./fonts/#{ $name }-#{ $weight }.woff2') format('woff2');
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == laptop {
+    @media (max-width: 1300px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == phone {
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}.";
+  }
+}

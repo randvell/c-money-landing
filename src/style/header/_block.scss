@@ -1,0 +1,23 @@
+.header {
+  position: relative;
+  overflow-x: hidden;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+  }
+}
+
+.top-menu {
+  display: flex;
+  gap: 40px;
+
+  &__link {
+    color: $white;
+  }
+}
+
+.btn--register {
+  margin-bottom: 70px;
+}
