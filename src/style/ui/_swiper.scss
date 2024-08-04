@@ -1,0 +1,19 @@
+.swiper {
+  overflow: hidden;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.swiper-wrapper {
+  display: flex;
+  padding: 0;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 17px;
+  height: 25px;
+  background: none;
+  position: absolute;
+  color: $purple !important;
+}

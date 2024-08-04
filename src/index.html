@@ -33,10 +33,13 @@
             Удобная платформа для хранения счётов, перевода валюты и покупки
             криптовалюты
           </p>
-          <button class="btn btn--register">Зарегистрироваться</button>
+          <button class="btn hero__register-btn">Зарегистрироваться</button>
         </div>
       </div>
-      <div class="container advantages">
+    </header>
+
+    <main class="main">
+      <section class="container advantages">
         <h2 class="advantages__header">Почему с нами выгодно?</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
@@ -188,11 +191,196 @@
             <p>удобная платформа для отслежки счётов</p>
           </li>
         </ul>
-      </div>
-    </header>
+      </section>
 
-    <main></main>
+      <section class="register">
+        <div class="container">
+          <h2 class="register__heading">Как зарегистрироваться на платформе</h2>
+          <h3 class="register__description">
+            Пошагово заполните все поля формы
+          </h3>
 
-    <footer></footer>
+          <div class="register__steps">
+            <button
+              class="register__step register__step--active"
+              id="form-step-1"
+            >
+              1
+            </button>
+            <button class="register__step" id="form-step-2" disabled>2</button>
+            <button class="register__step" id="form-step-3" disabled>3</button>
+          </div>
+
+          <div class="register__form-container">
+            <form class="register__form form">
+              <div id="step-1" class="form__step">
+                <div class="input-container">
+                  <label class="input-label" for="name">Имя</label>
+                  <input class="input" name="name" type="text" />
+                </div>
+
+                <div class="input-container">
+                  <label class="input-label" for="surname">Фамилия</label>
+                  <input class="input" name="surname" type="text" />
+                </div>
+
+                <div class="input-container">
+                  <label class="input-label" for="middlename">Отчество</label>
+                  <input class="input" name="middlename" type="text" />
+                </div>
+
+                <div></div>
+                <div></div>
+
+                <button class="btn form__btn" data-action="next">Далее</button>
+              </div>
+
+              <div id="step-2" class="form__step hidden">
+                <div class="input-container">
+                  <label class="input-label" for="phone">Телефон</label>
+                  <input class="input" name="phone" type="text" />
+                </div>
+
+                <div class="input-container">
+                  <label class="input-label" for="email"
+                    >Электронная почта</label
+                  >
+                  <input class="input" name="email" type="text" />
+                </div>
+
+                <div class="input-container">
+                  <label class="input-label" for="middlename">Отчество</label>
+                  <input class="input" name="middlename" type="text" />
+                </div>
+
+                <button class="btn form__btn" data-action="next">Далее</button>
+              </div>
+
+              <div id="step-3" class="form__step hidden">
+                <div class="input-container">
+                  <label class="input-label" for="phone"
+                    >Придумайте логин</label
+                  >
+                  <input class="input" name="phone" type="text" />
+                </div>
+
+                <div class="input-container">
+                  <label class="input-label" for="phone"
+                    >Придумайте пароль</label
+                  >
+                  <input class="input" name="phone" type="text" />
+                </div>
+
+                <div class="input-container">
+                  <label class="input-label" for="middlename"
+                    >Повторите пароль</label
+                  >
+                  <input class="input" name="middlename" type="text" />
+                </div>
+
+                <div></div>
+                <div></div>
+
+                <button class="btn form__btn" type="submit">
+                  Зарегистрироваться
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="container">
+          <h2 class="reviews__header">Отзывы наших клиентов</h2>
+          <div class="reviews__slider">
+            <div class="swiper">
+              <ul class="swiper-wrapper reviews__list">
+                <li class="reviews__item swiper-slide">
+                  <figure class="reviews__image-container">
+                    <img class="reviews__image" src="./img/reviews/1.jpg" />
+                    <figcaption class="reviews__author">Юлия С</figcaption>
+                  </figure>
+                  <p class="reviews__text">
+                    «Очень удобная платформа для открытия мультивалютных счётов»
+                  </p>
+                </li>
+                <li class="reviews__item swiper-slide">
+                  <figure class="reviews__image-container">
+                    <img class="reviews__image" src="./img/reviews/2.jpg" />
+                    <figcaption class="reviews__author">Светлана С</figcaption>
+                  </figure>
+                  <p class="reviews__text">
+                    «Пользуюсь платформой уже больше года, нравится, что можно
+                    быстро менять валюту по выгодному курсу»
+                  </p>
+                </li>
+                <li class="reviews__item swiper-slide">
+                  <figure class="reviews__image-container">
+                    <img class="reviews__image" src="./img/reviews/3.jpg" />
+                    <figcaption class="reviews__author">Сергей А</figcaption>
+                  </figure>
+                  <p class="reviews__text">
+                    «Открыл счёт в биткоинах, могу быстро следить за курсом
+                    и делать обмен»
+                  </p>
+                </li>
+                <li class="reviews__item swiper-slide">
+                  <figure class="reviews__image-container">
+                    <img class="reviews__image" src="./img/reviews/1.jpg" />
+                    <figcaption class="reviews__author">Юлия С</figcaption>
+                  </figure>
+                  <p class="reviews__text">
+                    «Очень удобная платформа для открытия мультивалютных счётов»
+                  </p>
+                </li>
+
+                <li class="reviews__item swiper-slide">
+                  <figure class="reviews__image-container">
+                    <img class="reviews__image" src="./img/reviews/1.jpg" />
+                    <figcaption class="reviews__author">Юлия С</figcaption>
+                  </figure>
+                  <p class="reviews__text">
+                    «Очень удобная платформа для открытия мультивалютных счётов»
+                  </p>
+                </li>
+              </ul>
+
+              <svg
+                class="swiper-button-prev"
+                width="17"
+                height="26"
+                viewBox="0 0 17 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.1666 0.5L16.1041 3.4375L6.56246 13L16.1041 22.5625L13.1666 25.5L0.666623 13L13.1666 0.5Z"
+                  fill="currentColor"
+                />
+              </svg>
+
+              <svg
+                class="swiper-button-next"
+                width="17"
+                height="26"
+                viewBox="0 0 17 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.83325 0.5L0.895752 3.4375L10.4374 13L0.895752 22.5625L3.83325 25.5L16.3333 13L3.83325 0.5Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container"></div>
+    </footer>
   </body>
 </html>

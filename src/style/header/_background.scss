@@ -1,33 +1,9 @@
 .header {
-  &__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('./img/bg-phone.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 80% 25%;
-    background-size: 35%;
-    z-index: -1;
-
-    @include responsive(laptop) {
-      background-size: 40%;
-      background-position: 80% 20%;
-    }
-
-    @include responsive(tablet) {
-      background-size: 80%;
-      background-position: 50% 30%;
-    }
-  }
-
   &__background {
     box-sizing: border-box;
     position: absolute;
     width: 90vw;
-    height: 70%;
+    height: 100%;
     left: 35%;
     top: -25%;
 
@@ -46,6 +22,30 @@
     @include responsive(laptop) {
       left: 35%;
       top: -40%;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./img/bg-phone.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 70% 60%;
+    background-size: 25%;
+    z-index: -1;
+
+    @include responsive(laptop) {
+      background-size: 40%;
+      background-position: 80% 20%;
+    }
+
+    @include responsive(tablet) {
+      background-size: 80%;
+      background-position: 50% 30%;
     }
   }
 }

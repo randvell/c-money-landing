@@ -1,4 +1,6 @@
 .hero {
+  margin-bottom: 90px;
+
   &__text-container {
     width: 471px;
   }
@@ -9,6 +11,10 @@
 
   &__text {
     margin-bottom: 50px;
+    width: 380px;
+  }
+
+  &__register-btn {
     width: 380px;
   }
 }

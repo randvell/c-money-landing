@@ -1,0 +1,29 @@
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid $light-darken;
+  border-radius: 10px;
+  height: 70px;
+  font-size: 20px;
+  outline: none;
+}
+
+.input:active,
+.input:focus {
+  outline: 2px solid $lightPurple;
+}
+
+.input-label {
+  position: absolute;
+  top: -20px;
+  left: 15px;
+
+  font-size: 15px;
+  font-weight: 700;
+  color: $darkGrey;
+}
