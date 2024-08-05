@@ -1,0 +1,13 @@
+.contacts {
+  grid-area: contacts;
+  padding: 10px 20px;
+  max-width: 264px;
+  font-weight: 700;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+}

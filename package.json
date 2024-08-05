@@ -28,7 +28,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "@types/toastify-js": "^1.12.3",
     "normalize.css": "^8.0.1",
-    "swiper": "^11.1.9"
+    "swiper": "^11.1.9",
+    "toastify-js": "^1.12.0"
   }
 }

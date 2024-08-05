@@ -1,0 +1,19 @@
+.social {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+  }
+
+  &__item {
+    width: 46px;
+    height: 46px;
+    color: $purple;
+    will-change: color;
+    animation: 300ms;
+
+    &:hover {
+      color: $lightPurple;
+    }
+  }
+}
