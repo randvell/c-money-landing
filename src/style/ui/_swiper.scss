@@ -11,8 +11,8 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  width: 17px;
-  height: 25px;
+  width: 17px !important;
+  height: 25px !important;
   background: none;
   position: absolute;
   color: $purple !important;

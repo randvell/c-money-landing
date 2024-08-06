@@ -1,15 +1,20 @@
 .header {
   position: relative;
+  padding-top: 20px;
+  margin-bottom: 80px;
 
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 200px;
+    margin-bottom: 240px;
   }
 }
 
 .top-menu {
   display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
   gap: 40px;
 
   &__link {

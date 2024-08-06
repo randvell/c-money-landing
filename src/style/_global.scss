@@ -123,7 +123,7 @@ iframe {
   margin: 0 auto;
   max-width: 1240px;
   display: grid;
-  padding: 30px;
+  padding: 0 30px;
   width: 100%;
 
   @include responsive(laptop) {
