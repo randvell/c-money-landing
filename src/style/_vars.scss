@@ -33,7 +33,7 @@ $red: #c41e3a;
       @content;
     }
   } @else if $breakpoint == tablet {
-    @media (max-width: 768px) {
+    @media (max-width: 860px) {
       @content;
     }
   } @else if $breakpoint == phone {

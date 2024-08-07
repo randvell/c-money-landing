@@ -3,15 +3,29 @@
   padding: 70px 0 50px 0;
   color: white;
 
+  @include responsive(tablet) {
+    padding-top: 60px;
+  }
+
   &__container {
     display: grid;
     grid-template-areas:
       'logo menu contacts map'
       'copyright . . .';
-    gap: 22px 15px;
+    gap: 24px 15px;
 
     @include responsive(laptop) {
       gap: 9px 19px;
+    }
+
+    @include responsive(tablet) {
+      gap: 30px;
+      grid-template-columns: max-content 1fr;
+      grid-template-areas:
+        'logo .'
+        'menu contacts'
+        'map map'
+        'copyright .';
     }
   }
 
@@ -30,6 +44,11 @@
     @include responsive(laptop) {
       padding: 13px 20px 0 20px;
     }
+
+    @include responsive(tablet) {
+      padding: 0;
+      max-width: 220px;
+    }
   }
 
   &__copyright {
@@ -39,5 +58,6 @@
   &__map {
     grid-area: map;
     padding: 10px 0;
+    width: 100%;
   }
 }

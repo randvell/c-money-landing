@@ -5,6 +5,10 @@
   @include responsive(laptop) {
     max-width: 800px;
   }
+
+  @include responsive(tablet) {
+    max-width: 500px;
+  }
 }
 
 .swiper-wrapper {

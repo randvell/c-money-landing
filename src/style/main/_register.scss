@@ -2,8 +2,8 @@
   background-color: $light;
 
   &__heading {
-    margin-bottom: 31px;
-    padding-top: 65px;
+    margin-bottom: 20px;
+    padding-top: 57px;
     max-width: 780px;
   }
 
@@ -13,6 +13,10 @@
 
     @include responsive(laptop) {
       margin-bottom: 70px;
+    }
+
+    @include responsive(tablet) {
+      margin-bottom: 52px;
     }
   }
 
@@ -52,9 +56,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px 20px;
+
+    @include responsive(tablet) {
+      grid-template-columns: 1fr;
+      grid-auto-flow: row;
+      gap: 33px;
+    }
   }
 
   &__btn {
     grid-column: 3 / 4;
+
+    @include responsive(tablet) {
+      grid-column: unset;
+    }
   }
 }

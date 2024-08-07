@@ -26,4 +26,8 @@
   font-size: 15px;
   font-weight: 700;
   color: $darkGrey;
+
+  @include responsive(tablet) {
+    top: -20px;
+  }
 }

@@ -1,11 +1,20 @@
 .advantages {
   margin-bottom: 120px;
 
+  @include responsive(tablet) {
+    margin-bottom: 100px;
+  }
+
   &__header {
     margin-bottom: 50px;
 
     @include responsive(laptop) {
       margin-bottom: 55px;
+    }
+
+    @include responsive(tablet) {
+      max-width: 400px;
+      margin-bottom: 40px;
     }
   }
 
@@ -19,12 +28,21 @@
       grid-template-columns: repeat(4, minmax(150px, 241px));
       gap: 25px;
     }
+
+    @include responsive(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 58px 65px;
+    }
   }
 
   &__item {
     position: relative;
     width: 100%;
     padding-left: 41px;
+
+    @include responsive(tablet) {
+      line-height: 146%;
+    }
 
     &::after {
       content: '';
@@ -40,6 +58,11 @@
         #8100bd 48.81%,
         #a400be 113.27%
       );
+
+      @include responsive(tablet) {
+        top: unset;
+        bottom: -17px;
+      }
     }
   }
 

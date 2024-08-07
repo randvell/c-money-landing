@@ -23,6 +23,12 @@
       left: 35%;
       top: -40%;
     }
+
+    @include responsive(tablet) {
+      left: 46%;
+      top: -50%;
+      transform: rotate(30deg);
+    }
   }
 
   &__image {
@@ -44,8 +50,8 @@
     }
 
     @include responsive(tablet) {
-      background-size: 80%;
-      background-position: 50% 30%;
+      background-size: 58%;
+      background-position: 50% 21%;
     }
   }
 }
