@@ -9,6 +9,10 @@
       'logo menu contacts map'
       'copyright . . .';
     gap: 22px 15px;
+
+    @include responsive(laptop) {
+      gap: 9px 19px;
+    }
   }
 
   &__logo {
@@ -22,6 +26,10 @@
     line-height: 130%;
     padding: 8px 40px;
     gap: 14px;
+
+    @include responsive(laptop) {
+      padding: 13px 20px 0 20px;
+    }
   }
 
   &__copyright {

@@ -3,6 +3,10 @@
 
   &__header {
     margin-bottom: 50px;
+
+    @include responsive(laptop) {
+      margin-bottom: 55px;
+    }
   }
 
   &__list {
@@ -10,6 +14,11 @@
     grid-auto-flow: row;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
+
+    @include responsive(laptop) {
+      grid-template-columns: repeat(4, minmax(150px, 241px));
+      gap: 25px;
+    }
   }
 
   &__item {

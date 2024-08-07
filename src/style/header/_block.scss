@@ -3,10 +3,18 @@
   padding-top: 20px;
   margin-bottom: 80px;
 
+  @include responsive(laptop) {
+    margin-bottom: 25px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 240px;
+
+    @include responsive(laptop) {
+      margin-bottom: 210px;
+    }
   }
 }
 

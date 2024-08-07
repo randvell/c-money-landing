@@ -2,12 +2,20 @@
   padding-top: 90px;
   margin-bottom: 120px;
 
+  @include responsive(laptop) {
+    margin-bottom: 90px;
+  }
+
   &__slider {
     position: relative;
   }
 
   &__header {
     margin-bottom: 10px;
+
+    @include responsive(laptop) {
+      margin-bottom: 40px;
+    }
   }
 
   &__list {

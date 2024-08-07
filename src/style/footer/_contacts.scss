@@ -4,6 +4,11 @@
   max-width: 290px;
   font-weight: 700;
 
+  @include responsive(laptop) {
+    max-width: 181px;
+    padding: 8px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;

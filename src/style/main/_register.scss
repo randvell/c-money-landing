@@ -10,6 +10,10 @@
   &__description {
     font-weight: 400;
     margin-bottom: 60px;
+
+    @include responsive(laptop) {
+      margin-bottom: 70px;
+    }
   }
 
   &__steps {

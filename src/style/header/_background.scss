@@ -34,13 +34,13 @@
     background-image: url('./img/bg-phone.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 75% 70%;
+    background-position: 75% 80%;
     background-size: 37%;
     z-index: -1;
 
     @include responsive(laptop) {
-      background-size: 40%;
-      background-position: 80% 20%;
+      background-size: 45%;
+      background-position: 100% 70%;
     }
 
     @include responsive(tablet) {
