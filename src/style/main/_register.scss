@@ -41,11 +41,16 @@
 }
 
 .form {
+  position: relative;
   margin-bottom: 70px;
 
   &__step {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px 20px;
+  }
+
+  &__btn {
+    grid-column: 3 / 4;
   }
 }

@@ -4,8 +4,8 @@ import 'swiper/swiper-bundle.css';
 
 document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.swiper', {
-    spaceBetween: 30,
     slidesPerView: 3,
+    spaceBetween: 30,
     modules: [Navigation],
     navigation: {
       nextEl: '.swiper-button-next',

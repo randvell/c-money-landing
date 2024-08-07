@@ -1,0 +1,19 @@
+.agreement {
+  position: absolute;
+  font-size: 10px;
+  width: 320px;
+  right: 50px;
+  bottom: -50px;
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  &__link {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}

@@ -18,7 +18,7 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, 'dist'),
     },
-    watchFiles: ['**/*.html', '**/*.scss', '**/*.css'],
+    watchFiles: ['src/**/*.{html,scss,css}'],
   },
   entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.ts')],
   output: {

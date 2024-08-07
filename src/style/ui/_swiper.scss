@@ -1,19 +1,27 @@
 .swiper {
-  overflow: hidden;
-  max-width: 1080px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
 .swiper-wrapper {
-  display: flex;
   padding: 0;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  width: 17px !important;
-  height: 25px !important;
+  width: 50px !important;
+  height: 50px !important;
   background: none;
   position: absolute;
-  color: $purple !important;
+  color: $white !important;
+
+  &:hover {
+    color: #dfd4eb !important;
+  }
+}
+
+.swiper-button-next {
+  transform: rotate(180deg);
+  right: 40px !important;
+  left: auto !important;
 }

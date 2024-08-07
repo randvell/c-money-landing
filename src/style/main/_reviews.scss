@@ -2,20 +2,22 @@
   padding-top: 90px;
   margin-bottom: 120px;
 
+  &__slider {
+    position: relative;
+  }
+
   &__header {
     margin-bottom: 10px;
   }
 
   &__list {
     display: flex;
-    padding: 0 60px;
     line-height: 130%;
   }
 
-  &__item {
+  &__item-container {
     text-align: center;
     max-width: 260px;
-    padding: 30px 20px 0px 20px;
   }
 
   &__image-container {
