@@ -5,6 +5,11 @@
     margin-bottom: 20px;
     padding-top: 57px;
     max-width: 780px;
+
+    @include responsive(phone) {
+      padding-top: 38px;
+      margin-bottom: 10px;
+    }
   }
 
   &__description {
@@ -18,6 +23,11 @@
     @include responsive(tablet) {
       margin-bottom: 52px;
     }
+
+    @include responsive(phone) {
+      max-width: 240px;
+      margin-bottom: 25px;
+    }
   }
 
   &__steps {
@@ -25,6 +35,11 @@
     gap: 40px;
     justify-content: center;
     margin-bottom: 60px;
+
+    @include responsive(phone) {
+      gap: 20px;
+      margin-bottom: 30px;
+    }
   }
 
   &__step {
@@ -41,16 +56,52 @@
     text-align: center;
     border-radius: 100%;
 
+    @include responsive(phone) {
+      width: 33px;
+      height: 33px;
+      font-size: 18px;
+      line-height: 23px;
+    }
+
     &--active {
       border: 2px solid $purple;
       color: $purple;
     }
+  }
+
+  &__success {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+    background: $white;
+    padding: 50px 0;
+    margin-top: 50px;
+    margin-bottom: 80px;
+
+    @include responsive(phone) {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__success-container {
+    max-width: 570px;
+  }
+
+  &__success-header {
+    margin-bottom: 30px;
   }
 }
 
 .form {
   position: relative;
   margin-bottom: 70px;
+
+  @include responsive(phone) {
+    margin-bottom: 35px;
+  }
 
   &__step {
     display: grid;
@@ -70,5 +121,11 @@
     @include responsive(tablet) {
       grid-column: unset;
     }
+  }
+}
+
+.success {
+  @include responsive(phone) {
+    padding: 0;
   }
 }

@@ -12,7 +12,7 @@
       <div class="header__background"></div>
       <div class="header__image"></div>
       <div class="container header__top">
-        <img class="logo-top" src="./img/logo-top.png" />
+        <img class="logo-top" src="./img/logo-top.png" alt="Логотип компании" />
 
         <ul class="top-menu">
           <li class="top-menu__item">
@@ -27,6 +27,29 @@
             <a class="top-menu__link" href="#reviews">Отзывы</a>
           </li>
         </ul>
+
+        <button class="header__menu-btn">
+          <svg
+            class="menu-icon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_67_539)">
+              <path
+                d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z"
+                fill="white"
+              />
+            </g>
+            <defs>
+              <clippath>
+                <rect width="24" height="24" fill="white" />
+              </clippath>
+            </defs>
+          </svg>
+        </button>
       </div>
       <div class="container hero">
         <div class="hero__text-container">
@@ -70,7 +93,7 @@
                   y2="32.7517"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#2E00B1" />
+                  <stop offset="0" stop-color="#2E00B1" />
                   <stop offset="0.484375" stop-color="#8100BD" />
                   <stop offset="1" stop-color="#A400BE" />
                 </lineargradient>
@@ -81,7 +104,7 @@
             </svg>
 
             <h3 class="advantages__item-header">Статистика</h3>
-            <p>можно быстро отследить статистику доходов и расходов</p>
+            <p>можно быстро отследить статистику доходов и расходов</p>
           </li>
           <li class="advantages__item">
             <svg
@@ -107,7 +130,7 @@
                   y2="37.3938"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#2E00B1" />
+                  <stop offset="0" stop-color="#2E00B1" />
                   <stop offset="0.484375" stop-color="#8100BD" />
                   <stop offset="1" stop-color="#A400BE" />
                 </lineargradient>
@@ -144,7 +167,7 @@
                   y2="39.2038"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#2E00B1" />
+                  <stop offset="0" stop-color="#2E00B1" />
                   <stop offset="0.484375" stop-color="#8100BD" />
                   <stop offset="1" stop-color="#A400BE" />
                 </lineargradient>
@@ -181,7 +204,7 @@
                   y2="36.4397"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#2E00B1" />
+                  <stop offset="0" stop-color="#2E00B1" />
                   <stop offset="0.484375" stop-color="#8100BD" />
                   <stop offset="1" stop-color="#A400BE" />
                 </lineargradient>
@@ -198,128 +221,211 @@
       </section>
 
       <section id="register" class="register">
-        <div class="container">
+        <div class="container form">
           <h2 class="register__heading">Как зарегистрироваться на платформе</h2>
-          <h3 class="register__description">
-            Пошагово заполните все поля формы
-          </h3>
 
-          <div class="register__steps">
-            <button
-              class="register__step register__step--active"
-              id="form-step-1"
-              data-step-id="0"
-            >
-              1
-            </button>
-            <button
-              class="register__step"
-              id="form-step-2"
-              data-step-id="1"
-              disabled
-            >
-              2
-            </button>
-            <button
-              class="register__step"
-              id="form-step-3"
-              data-step-id="2"
-              disabled
-            >
-              3
-            </button>
+          <div class="register__container">
+            <h3 class="register__description">
+              Пошагово заполните все поля формы
+            </h3>
+            <div class="register__steps">
+              <button
+                class="register__step register__step--active"
+                id="form-step-1"
+                data-step-id="0"
+              >
+                1
+              </button>
+              <button
+                class="register__step"
+                id="form-step-2"
+                data-step-id="1"
+                disabled
+              >
+                2
+              </button>
+              <button
+                class="register__step"
+                id="form-step-3"
+                data-step-id="2"
+                disabled
+              >
+                3
+              </button>
+            </div>
+
+            <div class="register__form-container">
+              <form id="register-form" class="register__form form">
+                <div id="step-1" class="form__step" data-step-id="0">
+                  <div class="input-container">
+                    <label class="input-label" for="name">Имя</label>
+                    <input
+                      class="input"
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                    />
+                  </div>
+
+                  <div class="input-container">
+                    <label class="input-label" for="surname">Фамилия</label>
+                    <input
+                      class="input"
+                      id="surname"
+                      name="surname"
+                      type="text"
+                      required
+                    />
+                  </div>
+
+                  <div class="input-container">
+                    <label class="input-label" for="middlename">Отчество</label>
+                    <input
+                      class="input"
+                      id="middlename"
+                      name="middlename"
+                      type="text"
+                      required
+                    />
+                  </div>
+
+                  <button
+                    class="btn form__btn"
+                    type="button"
+                    data-action="next"
+                  >
+                    Далее
+                  </button>
+                </div>
+
+                <div id="step-2" class="form__step hidden" data-step-id="1">
+                  <div class="input-container">
+                    <label class="input-label" for="phone">Телефон</label>
+                    <input
+                      class="input"
+                      id="phone"
+                      name="phone"
+                      type="text"
+                      required
+                    />
+                  </div>
+
+                  <div class="input-container">
+                    <label class="input-label" for="email"
+                      >Электронная почта</label
+                    >
+                    <input
+                      class="input"
+                      id="email"
+                      name="email"
+                      type="text"
+                      required
+                    />
+                  </div>
+
+                  <button
+                    class="btn form__btn"
+                    type="button"
+                    data-action="next"
+                  >
+                    Далее
+                  </button>
+                </div>
+
+                <div id="step-3" class="form__step hidden" data-step-id="2">
+                  <div class="input-container">
+                    <label class="input-label" for="login"
+                      >Придумайте логин</label
+                    >
+                    <input
+                      class="input"
+                      id="login"
+                      name="login"
+                      type="text"
+                      required
+                    />
+                  </div>
+
+                  <div class="input-container">
+                    <label class="input-label" for="password"
+                      >Придумайте пароль</label
+                    >
+                    <input
+                      class="input"
+                      id="password"
+                      name="password"
+                      type="password"
+                      required
+                    />
+                  </div>
+
+                  <div class="input-container">
+                    <label class="input-label" for="password-validation"
+                      >Повторите пароль</label
+                    >
+                    <input
+                      class="input"
+                      id="password-validation"
+                      name="password-validation"
+                      type="password"
+                      required
+                    />
+                  </div>
+
+                  <button class="btn form__btn" type="submit">
+                    Зарегистрироваться
+                  </button>
+
+                  <div class="agreement">
+                    <label class="agreement__container">
+                      <input
+                        type="checkbox"
+                        name="agreement"
+                        class="checkbox"
+                      />
+                      <span class="agreement__text">
+                        By clicking on the button, I consent to the
+                        <a class="agreement__link"
+                          >processing of personal data</a
+                        >
+                        and agree to the
+                        <a class="agreement__link">privacy policy</a>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
+        </div>
 
-          <div class="register__form-container">
-            <form id="register-form" class="register__form form">
-              <div id="step-1" class="form__step" data-step-id="0">
-                <div class="input-container">
-                  <label class="input-label" for="name">Имя</label>
-                  <input class="input" name="name" type="text" required />
-                </div>
+        <div class="container success hidden">
+          <div class="register__success">
+            <svg
+              class="success-icon"
+              width="54"
+              height="54"
+              viewBox="0 0 54 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="54" height="54" rx="27" fill="#0EFF0A" />
+              <path
+                d="M22.4997 33.2551L16.2447 27.0001L14.1147 29.1151L22.4997 37.5001L40.4997 19.5001L38.3847 17.3851L22.4997 33.2551Z"
+                fill="white"
+              />
+            </svg>
 
-                <div class="input-container">
-                  <label class="input-label" for="surname">Фамилия</label>
-                  <input class="input" name="surname" type="text" required />
-                </div>
-
-                <div class="input-container">
-                  <label class="input-label" for="middlename">Отчество</label>
-                  <input class="input" name="middlename" type="text" required />
-                </div>
-
-                <button class="btn form__btn" type="button" data-action="next">
-                  Далее
-                </button>
-              </div>
-
-              <div id="step-2" class="form__step hidden" data-step-id="1">
-                <div class="input-container">
-                  <label class="input-label" for="phone">Телефон</label>
-                  <input class="input" name="phone" type="text" required />
-                </div>
-
-                <div class="input-container">
-                  <label class="input-label" for="email"
-                    >Электронная почта</label
-                  >
-                  <input class="input" name="email" type="text" required />
-                </div>
-
-                <button class="btn form__btn" type="button" data-action="next">
-                  Далее
-                </button>
-              </div>
-
-              <div id="step-3" class="form__step hidden" data-step-id="2">
-                <div class="input-container">
-                  <label class="input-label" for="login"
-                    >Придумайте логин</label
-                  >
-                  <input class="input" name="login" type="text" required />
-                </div>
-
-                <div class="input-container">
-                  <label class="input-label" for="password"
-                    >Придумайте пароль</label
-                  >
-                  <input
-                    class="input"
-                    name="password"
-                    type="password"
-                    required
-                  />
-                </div>
-
-                <div class="input-container">
-                  <label class="input-label" for="password-validation"
-                    >Повторите пароль</label
-                  >
-                  <input
-                    class="input"
-                    name="password-validation"
-                    type="password"
-                    required
-                  />
-                </div>
-
-                <button class="btn form__btn" type="submit">
-                  Зарегистрироваться
-                </button>
-
-                <div class="agreement">
-                  <label class="agreement__container">
-                    <input type="checkbox" name="agreement" class="checkbox" />
-                    <p class="agreement__text">
-                      By clicking on the button, I consent to the
-                      <a class="agreement__link">processing of personal data</a>
-                      and agree to the
-                      <a class="agreement__link">privacy policy</a>
-                    </p>
-                  </label>
-                </div>
-              </div>
-            </form>
+            <div class="register__success-container">
+              <h3 class="register__success-header">
+                Вы успешно зарегистрировались на платформе C-Money!
+              </h3>
+              <p>
+                Ссылка для входа в личный кабинет отправлена на вашу электронную
+                почту (не забудьте проверить папку «Спам»)
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -523,7 +629,7 @@
             <p>г. Москва ул. Новослободская 120/2 54</p>
           </div>
 
-          <ul class="social__list">
+          <ul class="social">
             <li class="social__item">
               <a class="soial__link" href="#">
                 <svg
@@ -561,7 +667,7 @@
           </ul>
         </address>
 
-        <img class="footer__map" src="./img/map.jpg" />
+        <img class="footer__map" src="./img/map.jpg" alt="Как добраться" />
 
         <p class="footer__copyright">© C-Money, 2024</p>
       </div>

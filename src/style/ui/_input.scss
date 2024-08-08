@@ -11,6 +11,11 @@
   height: 70px;
   font-size: 20px;
   outline: none;
+
+  @include responsive(phone) {
+    height: 50px;
+    font-size: 14px;
+  }
 }
 
 .input:active,
@@ -29,5 +34,10 @@
 
   @include responsive(tablet) {
     top: -20px;
+  }
+
+  @include responsive(phone) {
+    max-width: 280px;
+    font-size: 12px;
   }
 }

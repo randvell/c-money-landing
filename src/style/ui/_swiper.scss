@@ -9,6 +9,10 @@
   @include responsive(tablet) {
     max-width: 500px;
   }
+
+  @include responsive(phone) {
+    max-width: 300px;
+  }
 }
 
 .swiper-wrapper {
@@ -22,6 +26,11 @@
   background: none;
   position: absolute;
   color: $white !important;
+
+  @include responsive(phone) {
+    width: 36px !important;
+    height: 36px !important;
+  }
 
   &:hover {
     color: #dfd4eb !important;

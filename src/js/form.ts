@@ -29,4 +29,7 @@ export const validateInputs = (inputs: NodeListOf<HTMLInputElement>) => {
   });
 };
 
-export const showSuccessModal = () => {};
+export const showFormSuccess = () => {
+  document.querySelector('.form')?.classList.add('hidden');
+  document.querySelector('.success')?.classList.remove('hidden');
+};

@@ -4,4 +4,10 @@
   border-radius: 10px;
   background: linear-gradient(47deg, #2e00b1 0%, #8100bd 48.44%, #a400be 100%);
   color: $white;
+
+  @include responsive(phone) {
+    height: 50px;
+    width: 290px;
+    font-size: 16px;
+  }
 }

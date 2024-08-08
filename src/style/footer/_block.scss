@@ -7,6 +7,10 @@
     padding-top: 60px;
   }
 
+  @include responsive(phone) {
+    padding-top: 40px;
+  }
+
   &__container {
     display: grid;
     grid-template-areas:
@@ -27,10 +31,24 @@
         'map map'
         'copyright .';
     }
+
+    @include responsive(phone) {
+      gap: 20px;
+      grid-template-areas:
+        'logo'
+        'menu'
+        'contacts'
+        'map'
+        'copyright';
+    }
   }
 
   &__logo {
     grid-area: logo;
+
+    @include responsive(phone) {
+      margin-bottom: 10px;
+    }
   }
 
   &__menu {
@@ -49,6 +67,10 @@
       padding: 0;
       max-width: 220px;
     }
+
+    @include responsive(phone) {
+      gap: 9px;
+    }
   }
 
   &__copyright {
@@ -59,5 +81,6 @@
     grid-area: map;
     padding: 10px 0;
     width: 100%;
+    max-width: 280px;
   }
 }

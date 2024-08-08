@@ -19,5 +19,10 @@
     flex-direction: column;
     gap: 17px;
     margin-bottom: 25px;
+
+    @include responsive(phone) {
+      gap: 10px;
+      margin-bottom: 20px;
+    }
   }
 }

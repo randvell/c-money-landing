@@ -2,7 +2,7 @@
   &__background {
     box-sizing: border-box;
     position: absolute;
-    width: 90vw;
+    width: 100vw;
     height: 100%;
     left: 35%;
     top: -25%;
@@ -29,6 +29,12 @@
       top: -50%;
       transform: rotate(30deg);
     }
+
+    @include responsive(phone) {
+      left: 65%;
+      top: -40%;
+      transform: rotate(35deg);
+    }
   }
 
   &__image {
@@ -52,6 +58,11 @@
     @include responsive(tablet) {
       background-size: 58%;
       background-position: 50% 21%;
+    }
+
+    @include responsive(phone) {
+      background-size: 90%;
+      background-position: 50% 27%;
     }
   }
 }

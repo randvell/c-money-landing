@@ -5,6 +5,10 @@
     margin-bottom: 100px;
   }
 
+  @include responsive(phone) {
+    margin-bottom: 70px;
+  }
+
   &__header {
     margin-bottom: 50px;
 
@@ -15,6 +19,11 @@
     @include responsive(tablet) {
       max-width: 400px;
       margin-bottom: 40px;
+    }
+
+    @include responsive(phone) {
+      max-width: 250px;
+      margin-bottom: 25px;
     }
   }
 
@@ -33,6 +42,11 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 58px 65px;
     }
+
+    @include responsive(phone) {
+      grid-template-columns: 1fr;
+      gap: 38px;
+    }
   }
 
   &__item {
@@ -42,6 +56,11 @@
 
     @include responsive(tablet) {
       line-height: 146%;
+    }
+
+    @include responsive(phone) {
+      line-height: 130%;
+      max-width: 260px;
     }
 
     &::after {
@@ -73,5 +92,9 @@
 
   &__item-header {
     margin-bottom: 10px;
+
+    @include responsive(phone) {
+      line-height: 120%;
+    }
   }
 }

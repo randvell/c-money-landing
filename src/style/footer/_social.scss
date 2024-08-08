@@ -1,9 +1,7 @@
 .social {
-  &__list {
-    display: flex;
-    flex-direction: row;
-    gap: 18px;
-  }
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
 
   &__item {
     width: 46px;

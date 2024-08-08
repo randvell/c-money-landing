@@ -8,6 +8,11 @@
     padding-bottom: 60px;
   }
 
+  @include responsive(phone) {
+    padding-top: 120px;
+    padding-bottom: 35px;
+  }
+
   &__text-container {
     width: 471px;
 
@@ -21,11 +26,21 @@
 
   &__heading {
     margin-bottom: 20px;
+
+    @include responsive(phone) {
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
     margin-bottom: 50px;
     width: 380px;
+
+    @include responsive(phone) {
+      width: unset;
+      margin-bottom: 28px;
+      line-height: 133%;
+    }
   }
 
   &__register-btn {
@@ -34,5 +49,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include responsive(phone) {
+      width: 100%;
+      max-width: 290px;
+    }
   }
 }

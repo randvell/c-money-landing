@@ -11,6 +11,11 @@
     margin-bottom: 77px;
   }
 
+  @include responsive(phone) {
+    padding-top: 60px;
+    margin-bottom: 70px;
+  }
+
   &__slider {
     position: relative;
   }
@@ -25,11 +30,24 @@
     @include responsive(tablet) {
       max-width: 400px;
     }
+
+    @include responsive(phone) {
+      max-width: 250px;
+      margin-bottom: 22px;
+    }
   }
 
   &__list {
     display: flex;
     line-height: 130%;
+  }
+
+  &__item {
+    &:first-child {
+      @include responsive(phone) {
+        padding-left: 45px;
+      }
+    }
   }
 
   &__item-container {
@@ -38,6 +56,11 @@
 
     @include responsive(tablet) {
       max-width: 220px;
+      line-height: 130%;
+    }
+
+    @include responsive(phone) {
+      max-width: 200px;
     }
   }
 

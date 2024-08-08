@@ -1,4 +1,4 @@
-import {showSuccessModal, validateInputs} from './form';
+import {showFormSuccess, validateInputs} from './form';
 
 const maxStep = 2;
 const stepButtons = document.querySelectorAll('.register__step');
@@ -26,7 +26,7 @@ const controlForm = () => {
     e.preventDefault();
 
     if (form.dataset.canSubmit) {
-      showSuccessModal();
+      showFormSuccess();
       form.reset();
       changeStep(0);
     }

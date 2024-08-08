@@ -34,7 +34,7 @@ body {
   }
 
   @include responsive(phone) {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -47,10 +47,8 @@ h2 {
 h1,
 h2 {
   font-size: 40px;
-}
 
-h3 {
-  @include responsive(tablet) {
+  @include responsive(phone) {
     font-size: 19px;
   }
 }
@@ -62,6 +60,14 @@ h3 {
 
   @include responsive(laptop) {
     font-size: 24px;
+  }
+
+  @include responsive(tablet) {
+    font-size: 19px;
+  }
+
+  @include responsive(phone) {
+    font-size: 17px;
   }
 }
 
@@ -137,7 +143,7 @@ iframe {
   }
 
   @include responsive(phone) {
-    padding: 15px 7px;
+    padding: 0 15px;
   }
 }
 
