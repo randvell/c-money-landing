@@ -1,28 +1,18 @@
-.burger-active {
+.menu-open .header__top {
   background: $white;
+  color: $dark;
+  gap: 36px;
+  padding-bottom: 25px;
   grid-template-areas:
     'logo button'
     'menu menu';
-}
-
-header.menu-open {
-  .header__menu-btn {
-    span {
-      &:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-      }
-
-      &:nth-child(2) {
-        opacity: 0;
-      }
-
-      &:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-      }
-    }
-  }
 
   .nav {
-    transform: translateX(0);
+    display: grid;
   }
 }
+
+.logo-top {
+  grid-area: logo;
+}
+

@@ -120,6 +120,7 @@
 
     @include responsive(tablet) {
       grid-column: unset;
+      width: 100%;
     }
   }
 }

@@ -11,6 +11,7 @@
   height: 70px;
   font-size: 20px;
   outline: none;
+  box-sizing: border-box;
 
   @include responsive(phone) {
     height: 50px;

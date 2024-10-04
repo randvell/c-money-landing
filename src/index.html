@@ -11,13 +11,9 @@
     <header id="header" class="header">
       <div class="header__background"></div>
       <div class="header__image"></div>
-      <div class="container header__top burger-active">
-        <a href="/">
-          <img
-            class="logo-top"
-            src="./img/logo-top.png"
-            alt="Логотип компании"
-          />
+      <div class="container header__top">
+        <a class="logo-top" href="/">
+          <img src="./img/logo-top.png" alt="Логотип компании" />
         </a>
 
         <nav class="nav">
@@ -36,9 +32,9 @@
           </ul>
         </nav>
 
-        <button class="header__menu-btn" id="burger-btn">
+        <button class="header__menu-btn" id="burger-btn" data-state="closed">
           <svg
-            class="menu-icon"
+            id="burger-open"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -53,6 +49,26 @@
             </g>
             <defs>
               <clippath>
+                <rect width="24" height="24" fill="white" />
+              </clippath>
+            </defs>
+          </svg>
+          <svg
+            id="burger-close"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_75_223)">
+              <path
+                d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                fill="#210B36"
+              />
+            </g>
+            <defs>
+              <clippath id="clip0_75_223">
                 <rect width="24" height="24" fill="white" />
               </clippath>
             </defs>
@@ -231,7 +247,7 @@
 
       <section id="register" class="register">
         <div class="container form">
-          <h2 class="register__heading">Как зарегистрироваться на платформе</h2>
+          <h2 class="register__heading">Как зарегистрироваться на платформе</h2>
 
           <div class="register__container">
             <h3 class="register__description">
