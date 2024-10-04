@@ -1,7 +1,6 @@
 .header {
   overflow: hidden;
   position: relative;
-  padding-top: 20px;
   margin-bottom: 80px;
 
   @include responsive(laptop) {
@@ -9,21 +8,96 @@
   }
 
   &__menu-btn {
+    grid-area: button;
     display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 2;
 
     @include responsive(tablet) {
       display: block;
     }
+
+    span {
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      position: absolute;
+      left: 0;
+      transition: transform 0.3s ease;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+      }
+    }
+  }
+
+  &.menu-open {
+    .header__menu-btn {
+      span {
+        &:nth-child(1) {
+          transform: translateY(9px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(-9px) rotate(-45deg);
+        }
+      }
+    }
+
+    .nav {
+      transform: translateX(0);
+    }
   }
 
   &__top {
-    display: flex;
+    display: grid;
+    grid-template-areas: 'logo menu';
     justify-content: space-between;
     margin-bottom: 240px;
+    padding-top: 20px;
 
     @include responsive(laptop) {
       margin-bottom: 210px;
     }
+
+    @include responsive(tablet) {
+      grid-template-areas: 'logo button';
+    }
+  }
+}
+
+.nav {
+  grid-area: menu;
+
+  @include responsive(tablet) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 80px 20px 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1;
   }
 }
 
@@ -39,10 +113,7 @@
   }
 
   @include responsive(tablet) {
-    display: none;
+    flex-direction: column;
+    align-items: flex-start;
   }
-}
-
-.btn--register {
-  margin-bottom: 70px;
 }

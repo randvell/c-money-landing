@@ -4,10 +4,32 @@
   border-radius: 10px;
   background: linear-gradient(47deg, #2e00b1 0%, #8100bd 48.44%, #a400be 100%);
   color: $white;
+  transition: background 0.4s ease, transform 0.2s ease;
 
   @include responsive(phone) {
     height: 50px;
     width: 290px;
     font-size: 16px;
+  }
+
+  &:hover {
+    background: linear-gradient(47deg, #2e00b1 0%, #8100bd 48.44%, #a400be 100%),
+      rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+
+    &:active {
+      background: linear-gradient(
+          47deg,
+          #2e00b1 0%,
+          #8100bd 48.44%,
+          #a400be 100%
+        ),
+        rgba(255, 255, 255, 0.2);
+      transform: scale(0.98);
+    }
+
+    &:focus {
+      box-shadow: 0 0 15px rgba(129, 0, 189, 0.6);
+    }
   }
 }
