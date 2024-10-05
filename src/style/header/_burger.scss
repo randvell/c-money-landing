@@ -1,18 +1,21 @@
 .menu-open .header__top {
   background: $white;
   color: $dark;
-  gap: 36px;
-  padding-bottom: 25px;
-  grid-template-areas:
-    'logo button'
-    'menu menu';
+  display: flex;
 
   .nav {
+    padding: 50px 0 30px;
+    width: 100%;
+    background: $white;
+    top: 20px;
+    position: absolute;
     display: grid;
+    color: $dark;
+    height: max-content;
   }
 }
 
 .logo-top {
+  z-index: 2;
   grid-area: logo;
 }
-

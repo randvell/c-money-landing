@@ -2,10 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const burgerBtn = document.getElementById('burger-btn');
   const header = document.querySelector('.header');
   const nav = document.querySelector('.nav') as HTMLElement;
+  const menuLinks = document.querySelectorAll('.top-menu__link');
 
-  if (!burgerBtn || !header || !nav) {
-    return;
-  }
+  if (!burgerBtn || !header || !nav) return;
 
   document.body.classList.add('no-transition');
 
@@ -13,11 +12,15 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.classList.remove('no-transition');
   }, 100);
 
+  const closeMenu = () => {
+    header.classList.remove('menu-open');
+  };
+
   const handleViewportChange = () => {
     const isMobile = window.innerWidth <= 720;
 
     if (!isMobile && header.classList.contains('menu-open')) {
-      header.classList.remove('menu-open');
+      closeMenu();
     }
 
     nav.style.transform = '';
@@ -40,16 +43,22 @@ document.addEventListener('DOMContentLoaded', function () {
     burgerBtn.dataset.state = isOpen ? 'open' : 'closed';
   });
 
+  menuLinks.forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
   document.addEventListener('click', function (event) {
-    if (!(event.target instanceof Node)) {
-      return;
-    }
+    if (!(event.target instanceof Node)) return;
+
+    const isClickInsideNav = nav.contains(event.target as Node);
+    const isClickOnBurger = burgerBtn.contains(event.target as Node);
 
     if (
-      !header.contains(event.target) &&
+      !isClickInsideNav &&
+      !isClickOnBurger &&
       header.classList.contains('menu-open')
     ) {
-      header.classList.remove('menu-open');
+      closeMenu();
     }
   });
 });
