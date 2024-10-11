@@ -13,6 +13,7 @@
 
   &__container {
     display: grid;
+    grid-template-columns: repeat(3, max-content) minmax(150px, 400px);
     grid-template-areas:
       'logo menu contacts map'
       'copyright . . .';
